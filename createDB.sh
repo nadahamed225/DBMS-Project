@@ -6,15 +6,11 @@ export LC_COLLATE=C
 cd ~/DBServer
 read -p "Enter The name of DB : " dbname
             
-   if [[ $dbname =~ [[:space:]]* ]]
-      then
-      echo -e  "dbname can not contain spaces :(( , Enter a correct dbname :" 
-      read dbname
-    
-    elif [[ -d $dbname ]] 
+
+    if [[ -d $dbname ]] 
       then     
       echo -e "This dbname is exists :(( , Enter a correct dbname :" 
-      read dbname       
+       . ~/bash_project/DBMenu.sh      
  
     else
        if [[ $dbname == +([a-zA-Z]) ]]
@@ -24,9 +20,9 @@ read -p "Enter The name of DB : " dbname
          echo -e "Database $dbname created Successfully :))"
        #special char
        else
-          echo -e  "dbname can not contain special char :(( , Enter a correct dbname : " 
-          read dbname
+          echo -e  "dbname can not contain special as("space",/,\,-,@,#,!,%,$,*,&,%,^,(,),|,\ " 
+          . ~/bash_project/DBMenu.sh
        fi
 
    fi 
-          . ~/DBMenu.sh          
+          . ~/bash_project/DBMenu.sh          
