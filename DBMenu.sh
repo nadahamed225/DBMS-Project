@@ -1,19 +1,19 @@
 #DBserver Menu
 echo "DBserver Menu : "
 select choice in "Create DB" "List DBs" "Connect To DB" "Drop DB" "Exit"
-do 
+do
     case $choice in 
     "Create DB" )
-             . ~/createDB.sh
+             . ~/bash_project/createDB.sh
 ;;
     "List DBs" )
-         . ~/ListDB.sh  
+         . ~/bash_project/ListDB.sh  
 ;;
     "Connect To DB" )
-            
+            . ~/bash_project/ConnectDB.sh
 ;;
     "Drop DB" )
-       
+       . ~/bash_project/DropDB.sh
 ;;
     "Exit" )
            exit

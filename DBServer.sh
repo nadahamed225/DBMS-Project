@@ -12,4 +12,4 @@ else
     cd ~/DBserver
 fi
 #go to DBserver Menu
-. ~/DBMenu.sh
+. ~/bash_project/DBMenu.sh
