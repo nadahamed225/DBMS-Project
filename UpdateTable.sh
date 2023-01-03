@@ -39,15 +39,15 @@ fi
 
  if [[ $flag == 1 ]]
  then
-  echo $new
-   echo $old
-   echo ${arrindex[@]}
-   echo $Tablename
+   #echo $new
+   #echo $old
+   #echo ${arrindex[@]}
+   #echo $Tablename
    for (( x=0; x < counter; x++ ))
      do
-       sed -i "s/$old/$new/" $Tablename
-       #sed -i "${arrindex[$x]}s/$old/$new/" $Tablename
-       #sed -i "${column_index[$g]}s/$copy_user_value/$newValue/" $name
+      declare -i line=${arrindex[$x]}+2
+      #echo $line
+       sed -i "$line s/$old/$new/" $Tablename
      done
  fi
 
